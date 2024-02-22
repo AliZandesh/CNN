@@ -1,0 +1,40 @@
+To calculate the number of parameters in each layer of a convolutional neural network (CNN), we need to consider the number of weights and biases in each layer. 
+Here's a general process for calculating the number of parameters in a convolutional layer:
+
+1- Determine the number of filters in the layer. bias = numbers of filters
+
+2- Determine the size of each filter (width x height x depth).
+
+3- Determine the number of channels in the input to the layer.
+
+4- Calculate the number of weights in the layer as (filter width x filter height x input depth x number of filters).
+
+5- Calculate the number of biases in the layer as the number of filters.
+Here's an example of how to calculate the number of parameters in each layer of a CNN using the formula above:
+
+
+****************
+
+Suppose we have a CNN with the following architecture:
+Input layer: 32x32x3
+Convolutional layer 1: 16 filters of size 3x3x3
+Convolutional layer 2: 32 filters of size 3x3x16
+Fully connected layer: 128 neurons
+Output layer: 10 neurons
+
+To calculate the number of parameters in each layer:
+Input layer: No parameters to calculate.
+Convolutional layer 1: Number of weights = (3 x 3 x 3 x 16) = 432, Number of biases = 16.
+Convolutional layer 2: Number of weights = (3 x 3 x 16 x 32) = 4608, Number of biases = 32.
+Fully connected layer: Number of weights = (4608 x 128) = 589,824, Number of biases = 128.
+Output layer: Number of weights = (128 x 10) = 1,280, Number of biases = 10.
+Therefore, the total number of parameters in the CNN is:
+432 + 16 + 4608 + 32 + 589,824 + 128 + 1,280 + 10 = 596,330.
+
+
+************************
+So, in general, given
+M filters of shape K×K
+an input of shape H×W×D
+the number of parameters of the standard 2d convolutional layer, with scalar biases, is M∗(K∗K∗D)+M
+without biases, is M∗(K∗K∗D)

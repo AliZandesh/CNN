@@ -1,0 +1,30 @@
+https://www.analyticsvidhya.com/blog/2021/06/beginner-friendly-project-cat-and-dog-classification-using-cnn/
+
+Neural networks can be trained by using batches of images, each of them having a label to identify the real nature of the image.
+
+Batch:
+A batch can contain few tenths to hundreds of images.
+For each and every image, the network prediction is compared with the corresponding existing label, and the distance between network prediction and the truth is evaluated for the whole batch. 
+Then, the network parameters are modified to minimize the distance and thus the prediction capability of the network is increased. 
+The training process continues for every batch similarly.
+
+Filter:
+CNN does the processing of Images with the help of matrixes of weights known as filters.
+They detect low-level features like vertical and horizontal edges etc. 
+Through each layer, the filters recognize high-level features.
+For loss function, we are using Binary cross-entropy to compare the class output to each of the predicted probabilities. 
+Then it calculates the penalization score based on the total distance from the expected value.
+The filter is always smaller than input data and the dot product is performed between input and filter array.
+
+Image augmentation:
+Image augmentation is a method of applying different kinds of transformation to original images resulting in multiple transformed copies of the same image. 
+The images are different from each other in certain aspects because of shifting, rotating, flipping techniques. 
+So, we are using the Keras ImageDataGenerator class to augment our images.
+
+Activation Function:
+The main need for activation function is to add non-linearity into the neural network.
+
+Pooling:
+pooling basically helps reduce the number of parameters and computations present in the network. 
+It progressively reduces the spatial size of the network and thus controls overfitting. 
+There are two types of operations in this layer; Average pooling and Maximum pooling.
